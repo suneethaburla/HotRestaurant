@@ -79,9 +79,7 @@
 
   </div>
 
-</body>
 
-</html>
 
 <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
 <script type="text/javascript">
@@ -108,27 +106,22 @@
     // The callback is the response of the server. In our case, we set up code in api-routes that "returns" true or false
     // depending on if a tables is available or not.
 
-    $.post("/api/tables", newReservation,
-      function(data) {
+    $.ajax ({
+        method: 'POST',
+        url:'/api/tables',
+        data: newReservation,
 
-        // If a table is available... tell user they are booked.
-        if (data) {
-          alert("Yay! You are officially booked!");
-        }
-
-        // If a table is available... tell user they on the waiting list.
-        else {
-          alert("Sorry you are on the wait list");
-        }
-
-        // Clear the form when submitting
+    }). then (res => {
         $("#reserve-name").val("");
         $("#reserve-phone").val("");
         $("#reserve-email").val("");
         $("#reserve-unique-id").val("");
-
-      });
+        alert(res);
+    })
 
   });
 
 </script>
+</body>
+
+</html>
