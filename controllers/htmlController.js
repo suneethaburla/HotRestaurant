@@ -5,7 +5,6 @@ module.exports = {
     getHome: (req, res) => {
         console.log(__dirname);
         res.sendFile(path.join(__dirname, '..', 'views', 'home.html'));
-
     },
     getReserve: (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'views', 'reserve.html'));
@@ -13,5 +12,4 @@ module.exports = {
     getTables: (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'views', 'tables.html'));
     }
-
-}
+};

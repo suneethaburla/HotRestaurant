@@ -7,4 +7,5 @@ router.route('/')
 .get(reserveController.getReserve)
 //for post request we say  .post(reserveController.createReserve)
 .post(reserveController.createReserve)
+.delete(reserveController.deleteReserves)
 module.exports = router;

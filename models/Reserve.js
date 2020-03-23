@@ -7,7 +7,7 @@ const manny = {
     email: 'm@m.com',
     uniqueID: 01
 }
-const reserve = [];
+const reserve = [manny];
 
 //export the reserve array
 module.exports = reserve;

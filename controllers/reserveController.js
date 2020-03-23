@@ -19,6 +19,10 @@ module.exports = {
         db.Reserve.push(newReservation);
         res.json({success: "You are booked!"})
         
+    },
+    deleteReserves: (req, res) => {
+        db.Reserve.length = 0;
+        res.send("Deleted reservations");
     }
 
 

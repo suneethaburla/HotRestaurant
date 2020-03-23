@@ -5,7 +5,7 @@ const manny = {
     email: 'm@m.com',
     uniqueID: 01234
 }
-const waitlist = [];
+const waitlist = [manny];
 
 //export the waitlist array
 module.exports = waitlist;

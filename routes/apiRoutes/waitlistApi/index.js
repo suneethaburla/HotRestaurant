@@ -6,4 +6,5 @@ const waitlistController = require ('../../../controllers/waitlistController')
 
 router.route ('/')
 .get(waitlistController.getWaitlist)
+.delete(waitlistController.deleteWaitlist)
 module.exports = router;
