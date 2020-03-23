@@ -12,5 +12,13 @@ app.use(express.urlencoded({extended: true}));
 //create a port 
 const PORT = 3000;
 
+const routes = require('./routes');
+//we did not specify any index.js so by default it is index.js in the routes folder
+//when we use app.use, it takes a callback with req, res as parameters
+
+//for every route that hits slash, use these routes
+
+app.use ('/', routes);
+
 //when app is listening to the port console log something
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
